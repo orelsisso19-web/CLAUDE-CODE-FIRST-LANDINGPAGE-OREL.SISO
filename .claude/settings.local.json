@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"c:\\\\Users\\\\orels\\\\OneDrive\\\\Documentos\\\\CLAUDE COURSE\" /s /b)"
+    ]
+  }
+}
