@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const links = [
+  { href: "#top", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
@@ -31,7 +32,7 @@ export function Navbar() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         <a href="#top" className="text-lg font-semibold tracking-tight">
-          Orel<span className="text-primary">.</span>Sisso
+          Orel Sisso
         </a>
         <div className="hidden items-center gap-8 sm:flex">
           {links.map((l) => (
