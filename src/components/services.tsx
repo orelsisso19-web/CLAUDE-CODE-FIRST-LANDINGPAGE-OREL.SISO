@@ -1,47 +1,66 @@
-import { Rocket, Smartphone, Zap } from "lucide-react";
 import { Reveal } from "@/components/motion/reveal";
 import { ServiceCard } from "@/components/service-card";
 
 const services = [
   {
-    icon: Rocket,
+    n: "01",
     title: "Lead-Gen Pages",
-    description:
-      "High-converting landing pages built around a single goal: turning visitors into leads. Forms, CTAs, and copy that work together.",
+    summary:
+      "High-converting landing pages designed around a single goal — capturing the lead. Forms, CTAs and copy that pull in one direction.",
+    keyword: "Convert.",
+    metric: "+38% avg. lift",
+    tags: ["Strategy", "Copy", "Forms", "Tracking"],
   },
   {
-    icon: Smartphone,
-    title: "Mobile-First Design",
-    description:
-      "Most of your customers are on a phone. Every page is designed and tested mobile-first — fast, readable, and effortless to tap.",
+    n: "02",
+    title: "Mobile-First Sites",
+    summary:
+      "Built for the thumb. Every page is composed and tested mobile-first — fast, readable, effortless to tap, indistinguishable from native.",
+    keyword: "Tactile.",
+    metric: "100% responsive",
+    tags: ["Responsive", "Tap-friendly", "Accessible"],
   },
   {
-    icon: Zap,
+    n: "03",
     title: "Performance",
-    description:
-      "Built on modern stacks (Next.js, edge hosting). Pages load in under 1.5s, score 90+ on Lighthouse, and rank better in search.",
+    summary:
+      "Modern stack — Next.js, edge hosting, image optimisation. Pages load in under 1.5s, score 90+ on Lighthouse, and rank where customers look.",
+    keyword: "Quick.",
+    metric: "Sub-1.5s loads",
+    tags: ["Next.js", "Edge", "SEO", "Lighthouse 90+"],
   },
 ];
 
 export function Services() {
   return (
-    <section id="services" className="bg-muted/40 py-20 sm:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="services" className="relative bg-paper-deep/40 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+        {/* Section header */}
         <Reveal>
-          <div className="mx-auto mb-14 max-w-2xl text-center">
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-              What I build
-            </h2>
-            <p className="mt-3 text-balance text-muted-foreground">
-              Three things, done well — built for SMBs that need a real digital
-              presence without the agency price tag.
-            </p>
+          <div className="mb-16 grid gap-8 sm:mb-24 lg:grid-cols-12">
+            <div className="lg:col-span-2">
+              <p className="eyebrow">Chapter 02</p>
+              <p className="mt-3 font-serif text-5xl leading-none">02</p>
+            </div>
+            <div className="lg:col-span-7">
+              <h2 className="font-serif text-[clamp(2.25rem,5.5vw,4.5rem)] leading-[1.02] tracking-[-0.02em] text-balance">
+                Three things, <em className="italic text-primary">done well.</em>
+              </h2>
+            </div>
+            <div className="lg:col-span-3 lg:pt-3">
+              <p className="text-pretty text-[15px] leading-relaxed text-ink-soft">
+                A small studio runs on focus. I keep the catalogue narrow on
+                purpose — these are the disciplines that actually move the
+                numbers for SMBs.
+              </p>
+            </div>
           </div>
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Editorial numbered list */}
+        <div className="border-t border-rule">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 0.1}>
+            <Reveal key={s.n} delay={i * 0.08}>
               <ServiceCard {...s} />
             </Reveal>
           ))}

@@ -1,21 +1,36 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
-const inter = Inter({
+const sans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const serif = Instrument_Serif({
+  variable: "--font-serif",
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Orel Sisso — Modern Web Solutions for Small Businesses",
+  title: "Orel Sisso — Independent Web Studio",
   description:
-    "Modern, fast, mobile-first websites and lead-gen pages for small and medium businesses. Direct communication, no agency overhead.",
+    "An independent studio of one. Fast, mobile-first websites and lead-gen pages for small and medium businesses. Direct, considered, hand-built.",
   openGraph: {
-    title: "Orel Sisso — Modern Web Solutions",
+    title: "Orel Sisso — Independent Web Studio",
     description:
-      "Lead-gen pages, mobile-first design, and high-performance sites for SMBs.",
+      "An independent studio of one. Lead-gen pages, mobile-first design, and high-performance sites for SMBs.",
     type: "website",
   },
 };
@@ -26,11 +41,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${sans.variable} ${serif.variable} ${mono.variable} h-full antialiased`}
+    >
       <body
-        className="min-h-full flex flex-col font-sans"
+        className="min-h-full flex flex-col font-sans bg-background text-foreground"
         suppressHydrationWarning
       >
+        <div className="grain pointer-events-none fixed inset-0 z-50 opacity-[0.06] mix-blend-multiply" />
         {children}
         <Toaster richColors position="top-center" />
       </body>

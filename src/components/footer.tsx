@@ -1,17 +1,30 @@
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-border py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-sm text-muted-foreground sm:flex-row">
-        <p>
-          © {year} Orel Sisso. Built with Next.js.
-        </p>
-        <a
-          href="#contact"
-          className="font-medium text-foreground transition-colors hover:text-primary"
-        >
-          Start a project →
-        </a>
+    <footer className="relative overflow-hidden border-t border-rule pt-16 pb-10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-10">
+        {/* Massive outline wordmark */}
+        <div className="select-none pb-12 sm:pb-16">
+          <p className="font-serif text-[clamp(4rem,18vw,16rem)] leading-[0.85] tracking-[-0.04em] outline-display">
+            Orel <em className="italic">Sisso</em>
+          </p>
+        </div>
+
+        {/* Bottom meta strip */}
+        <div className="grid gap-6 border-t border-rule pt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:grid-cols-3">
+          <p>© {year} · Studio of One</p>
+          <p className="sm:text-center">
+            <span className="text-foreground">Tel Aviv</span> ⇆ Worldwide
+          </p>
+          <p className="sm:text-right">
+            <a
+              href="#contact"
+              className="swipe-link text-foreground hover:text-primary"
+            >
+              Begin a project →
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

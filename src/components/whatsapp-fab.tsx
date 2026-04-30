@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
 
 export function WhatsAppFab() {
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
   const message = encodeURIComponent(
-    "Hi Orel, I saw your website and would like to discuss a project.",
+    "Hi Orel, I saw your studio and would like to discuss a project.",
   );
   const href = number
     ? `https://wa.me/${number}?text=${message}`
@@ -18,14 +17,18 @@ export function WhatsAppFab() {
       target={number ? "_blank" : undefined}
       rel={number ? "noopener noreferrer" : undefined}
       aria-label="Chat on WhatsApp"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.6, duration: 0.4 }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="fixed bottom-5 right-5 z-50 inline-flex size-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 ring-1 ring-primary/20 transition-shadow hover:shadow-xl"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.8, duration: 0.5 }}
+      whileHover={{ y: -2 }}
+      className="group/wa fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 border border-foreground bg-background pl-3 pr-4 py-2.5 shadow-[3px_3px_0_0_var(--ink)] transition-shadow hover:shadow-[5px_5px_0_0_var(--vermillion)]"
     >
-      <MessageCircle className="size-6" />
+      <span className="relative inline-flex size-2.5">
+        <span className="absolute inset-0 rounded-full bg-primary pulse-dot" />
+      </span>
+      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-foreground transition-colors group-hover/wa:text-primary">
+        Chat · WhatsApp
+      </span>
     </motion.a>
   );
 }
