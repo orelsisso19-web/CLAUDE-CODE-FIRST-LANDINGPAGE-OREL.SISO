@@ -11,11 +11,8 @@ export function Footer() {
         </div>
 
         {/* Bottom meta strip */}
-        <div className="grid gap-6 border-t border-rule pt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:grid-cols-3">
+        <div className="grid gap-6 border-t border-rule pt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:grid-cols-2">
           <p>© {year} · Studio of One</p>
-          <p className="sm:text-center">
-            <span className="text-foreground">Tel Aviv</span> ⇆ Worldwide
-          </p>
           <p className="sm:text-right">
             <a
               href="#contact"

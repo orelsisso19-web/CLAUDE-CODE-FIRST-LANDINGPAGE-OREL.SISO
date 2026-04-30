@@ -44,7 +44,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="hidden sm:inline"
         >
-          {new Date().getFullYear()} · Tel Aviv ⇆ Worldwide
+          Independent Studio · {new Date().getFullYear()}
         </motion.span>
         <motion.span
           initial={{ opacity: 0 }}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, Fraunces, JetBrains_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -9,12 +9,12 @@ const sans = DM_Sans({
   display: "swap",
 });
 
-const serif = Instrument_Serif({
+const serif = Fraunces({
   variable: "--font-serif",
-  weight: "400",
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
+  axes: ["SOFT", "opsz"],
 });
 
 const mono = JetBrains_Mono({

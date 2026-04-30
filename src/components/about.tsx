@@ -74,8 +74,6 @@ export function About() {
               <div className="flex flex-wrap items-center gap-x-8 gap-y-3 pt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                 <span>Independent · Est. 2024</span>
                 <span aria-hidden>✦</span>
-                <span>Tel Aviv ⇆ Worldwide</span>
-                <span aria-hidden>✦</span>
                 <span>Currently · Q2 2026</span>
               </div>
             </Reveal>

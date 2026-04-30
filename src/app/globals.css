@@ -117,6 +117,16 @@
 @layer utilities {
   .font-serif {
     font-family: var(--font-serif), ui-serif, Georgia, serif;
+    font-weight: 500;
+    font-variation-settings: "SOFT" 80, "opsz" 144;
+    letter-spacing: -0.015em;
+  }
+  .font-serif em,
+  em.font-serif,
+  .font-serif .italic,
+  .italic.font-serif {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "opsz" 144;
   }
   .font-mono {
     font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
