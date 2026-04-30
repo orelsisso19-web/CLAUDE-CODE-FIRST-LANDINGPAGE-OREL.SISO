@@ -12,7 +12,7 @@ export function Footer() {
 
         {/* Bottom meta strip */}
         <div className="grid gap-6 border-t border-rule pt-8 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:grid-cols-2">
-          <p>© {year} · Studio of One</p>
+          <p>© {year} · Orel Sisso</p>
           <p className="sm:text-right">
             <a
               href="#contact"

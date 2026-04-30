@@ -49,9 +49,9 @@ export function Services() {
             </div>
             <div className="lg:col-span-3 lg:pt-3">
               <p className="text-pretty text-[15px] leading-relaxed text-ink-soft">
-                A small studio runs on focus. I keep the catalogue narrow on
-                purpose — these are the disciplines that actually move the
-                numbers for SMBs.
+                Focus is the value. The offering stays narrow on purpose —
+                these are the things that actually move the numbers for small
+                and medium businesses.
               </p>
             </div>
           </div>

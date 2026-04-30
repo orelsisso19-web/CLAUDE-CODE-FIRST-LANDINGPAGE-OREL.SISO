@@ -24,13 +24,13 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orel Sisso — Independent Web Studio",
+  title: "Orel Sisso — Modern Websites for Small Businesses",
   description:
-    "An independent studio of one. Fast, mobile-first websites and lead-gen pages for small and medium businesses. Direct, considered, hand-built.",
+    "Fast, mobile-first websites and lead-gen pages for small and medium businesses. Direct communication, real results.",
   openGraph: {
-    title: "Orel Sisso — Independent Web Studio",
+    title: "Orel Sisso — Modern Websites for Small Businesses",
     description:
-      "An independent studio of one. Lead-gen pages, mobile-first design, and high-performance sites for SMBs.",
+      "Lead-gen pages, mobile-first design, and high-performance sites for SMBs. Direct communication, real results.",
     type: "website",
   },
 };

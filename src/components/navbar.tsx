@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#top", label: "Index", n: "00" },
-  { href: "#services", label: "Studio", n: "01" },
-  { href: "#about", label: "Notes", n: "02" },
+  { href: "#top", label: "Home", n: "00" },
+  { href: "#services", label: "Services", n: "01" },
+  { href: "#about", label: "About", n: "02" },
   { href: "#contact", label: "Contact", n: "03" },
 ];
 
@@ -36,9 +36,6 @@ export function Navbar() {
         >
           <span className="font-serif text-2xl tracking-tight">
             Orel <em className="not-italic font-serif italic text-primary">Sisso</em>
-          </span>
-          <span className="hidden sm:inline-block font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground translate-y-[-2px]">
-            / Studio
           </span>
         </a>
 

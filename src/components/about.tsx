@@ -35,9 +35,9 @@ export function About() {
               <p className="font-serif text-5xl leading-none">03</p>
               <div className="hairline w-12" />
               <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground leading-relaxed">
-                Notes from
+                A few words
                 <br />
-                the studio.
+                about Orel.
               </p>
             </div>
           </Reveal>
@@ -46,21 +46,21 @@ export function About() {
           <div className="lg:col-span-6 space-y-8">
             <Reveal>
               <h2 className="font-serif text-[clamp(2.25rem,5.5vw,4.5rem)] leading-[1.02] tracking-[-0.02em] text-balance">
-                A studio of <em className="italic text-primary">one</em>.
+                Just <em className="italic text-primary">me</em>.
                 <br />
-                Nothing more.
+                No middlemen.
               </h2>
             </Reveal>
 
             <Reveal delay={0.05}>
               <div className="space-y-6 text-pretty text-lg leading-relaxed text-ink-soft sm:text-xl">
                 <p className="first-letter:font-serif first-letter:text-6xl first-letter:font-normal first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:leading-[0.85] first-letter:text-foreground">
-                  I&apos;m an independent developer working with small businesses
-                  that need a real digital presence — fast. I cut the agency
-                  overhead and ship sites that actually load, convert, and rank.
+                  I work with small businesses that need a real online presence —
+                  fast. The agency overhead gets cut and the result is a site
+                  that actually loads, converts, and ranks.
                 </p>
                 <p>
-                  You get someone who answers your messages, writes the code,
+                  You get someone who answers your messages, runs the project,
                   and owns the result. No middlemen, no decks, no quarterly
                   retainers for work that should have shipped last month.
                 </p>

@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 const ticker = [
   "Lead-Gen Pages",
   "Mobile-First",
-  "Next.js",
-  "Edge Performance",
+  "Fast Loads",
   "Conversion Copy",
-  "Direct Comms",
+  "Direct Communication",
   "SEO-Ready",
-  "Hand-built",
+  "Modern Design",
 ];
 
 export function Hero() {
@@ -36,7 +35,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          Vol. 01 — Studio Edition
+          Vol. 01 — Modern Websites
         </motion.span>
         <motion.span
           initial={{ opacity: 0 }}
@@ -44,7 +43,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="hidden sm:inline"
         >
-          Independent Studio · {new Date().getFullYear()}
+          Modern Web Solutions · {new Date().getFullYear()}
         </motion.span>
         <motion.span
           initial={{ opacity: 0 }}
@@ -68,9 +67,9 @@ export function Hero() {
             <p className="font-serif text-5xl leading-none">01</p>
             <div className="hairline w-12" />
             <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground leading-relaxed">
-              An independent
+              Modern websites
               <br />
-              studio of one.
+              for small business.
             </p>
           </div>
         </motion.aside>
@@ -129,12 +128,13 @@ export function Hero() {
           <div className="space-y-4">
             <div className="hairline" />
             <p className="text-pretty text-[15px] leading-relaxed text-ink-soft">
-              I&apos;m <em className="font-serif text-base italic">Orel</em> — an
-              independent developer building fast, mobile-first sites for small
-              and medium businesses. No agency overhead. No middlemen.
+              I&apos;m <em className="font-serif text-base italic">Orel</em>. I
+              help small and medium businesses launch fast, mobile-first
+              websites that turn visits into customers. No agency overhead. No
+              middlemen.
             </p>
             <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
-              Hand-built in Next.js · Shipped on edge
+              Modern stack · Built for speed
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export function Hero() {
               className="group/alt inline-flex items-center justify-between border border-rule px-5 py-4 transition-colors hover:border-foreground"
             >
               <span className="font-mono text-[11px] uppercase tracking-[0.18em]">
-                See the studio
+                See services
               </span>
               <span aria-hidden className="text-lg transition-transform group-hover/alt:translate-x-1">
                 ↓

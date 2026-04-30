@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export function WhatsAppFab() {
   const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
   const message = encodeURIComponent(
-    "Hi Orel, I saw your studio and would like to discuss a project.",
+    "Hi Orel, I saw your website and would like to discuss a project.",
   );
   const href = number
     ? `https://wa.me/${number}?text=${message}`
