@@ -80,9 +80,24 @@ export function ContactForm() {
                     A few lines is enough to start. I usually reply within 24
                     hours — or use the WhatsApp button if it&apos;s urgent.
                   </p>
-                  <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-                    sissoaiagency@gmail.com
-                  </p>
+                  <div className="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                    <p>
+                      <a
+                        href="mailto:orelsisso@gmail.com"
+                        className="swipe-link hover:text-primary"
+                      >
+                        orelsisso@gmail.com
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="tel:+50689865383"
+                        className="swipe-link hover:text-primary"
+                      >
+                        +506 8986 5383
+                      </a>
+                    </p>
+                  </div>
                 </div>
               </div>
             </Reveal>
