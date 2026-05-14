@@ -98,10 +98,10 @@ export function ContactForm() {
                   <div className="space-y-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                     <p>
                       <a
-                        href="mailto:orelsisso@gmail.com"
+                        href="mailto:sissowebbuilding@gmail.com"
                         className="swipe-link hover:text-primary"
                       >
-                        orelsisso@gmail.com
+                        sissowebbuilding@gmail.com
                       </a>
                     </p>
                     <p>
