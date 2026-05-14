@@ -1,17 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { Reveal } from "@/components/motion/reveal";
 import { contactSchema, type ContactInput } from "@/lib/schemas/contact";
 import { cn } from "@/lib/utils";
 
 export function ContactForm() {
-  const [submitting, setSubmitting] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -28,26 +24,26 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit = async (data: ContactInput) => {
-    setSubmitting(true);
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-
-      if (!res.ok) {
-        throw new Error(`Request failed: ${res.status}`);
-      }
-
-      toast.success("Message sent — I'll be in touch within 24 hours.");
+  const onSubmit = (data: ContactInput) => {
+    if (data.website && data.website.length > 0) {
       reset();
-    } catch {
-      toast.error("Something went wrong. Please try again or use WhatsApp.");
-    } finally {
-      setSubmitting(false);
+      return;
     }
+
+    const subject = `Project inquiry from ${data.name}`;
+    const body =
+      `Name: ${data.name}\n` +
+      `Email: ${data.email}\n` +
+      `Business: ${data.business}\n\n` +
+      `${data.message}`;
+
+    const href = `mailto:orelsisso@gmail.com?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = href;
+    toast.success("Opening your email app — hit send to deliver the message.");
+    reset();
   };
 
   return (
@@ -177,25 +173,20 @@ export function ContactForm() {
                   </p>
                   <button
                     type="submit"
-                    disabled={submitting}
                     className={cn(
-                      "group/send inline-flex items-center justify-between gap-6 border border-foreground bg-foreground px-6 py-4 text-paper transition-colors disabled:opacity-60",
+                      "group/send inline-flex items-center justify-between gap-6 border border-foreground bg-foreground px-6 py-4 text-paper transition-colors",
                       "hover:bg-primary hover:border-primary",
                     )}
                   >
                     <span className="font-mono text-[11px] uppercase tracking-[0.22em]">
-                      {submitting ? "Sending" : "Send dispatch"}
+                      Send dispatch
                     </span>
-                    {submitting ? (
-                      <Loader2 className="size-4 animate-spin" />
-                    ) : (
-                      <span
-                        aria-hidden
-                        className="text-lg transition-transform group-hover/send:translate-x-1"
-                      >
-                        →
-                      </span>
-                    )}
+                    <span
+                      aria-hidden
+                      className="text-lg transition-transform group-hover/send:translate-x-1"
+                    >
+                      →
+                    </span>
                   </button>
                 </div>
               </form>

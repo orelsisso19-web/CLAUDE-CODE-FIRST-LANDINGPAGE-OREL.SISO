@@ -3,19 +3,17 @@
 import { motion } from "framer-motion";
 
 export function WhatsAppFab() {
-  const number = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "";
+  const number = "50689865383";
   const message = encodeURIComponent(
     "Hi Orel, I saw your website and would like to discuss a project.",
   );
-  const href = number
-    ? `https://wa.me/${number}?text=${message}`
-    : "#contact";
+  const href = `https://wa.me/${number}?text=${message}`;
 
   return (
     <motion.a
       href={href}
-      target={number ? "_blank" : undefined}
-      rel={number ? "noopener noreferrer" : undefined}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
